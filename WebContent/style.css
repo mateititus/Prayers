@@ -1,0 +1,32 @@
+section {
+	min-height: 100vh;
+	display: flex;
+	background: url(wallpaper.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+
+.icons a {
+	position: relative;
+	top: 200px;
+	color: #111;
+	font-size: 40px;
+	transition: 0.3s;
+	transition-property: transform;
+}
+
+.icons a:not(:last-child) {
+	margin-right: 60px;
+}
+
+.icons a:hover {
+	transform: scale(1.5);
+}
