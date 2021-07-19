@@ -1,5 +1,5 @@
-# prayers
-A CRUD web application using Spring MVC.
+# Prayers
+I used Java and SpringMVC to create a praying circle where details like who is participating and what is the reason for prayer are noted. 
 
 How to open it:
 
