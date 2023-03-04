@@ -48,7 +48,7 @@
 				<td><c:out value="${mo.id}" /></td>
 				<td><c:out value="${mo.motiv}" /></td>
 				<td><c:out value="${mo.categorie}" /></td>
-				<td><c:out value="${mo.raspuns}" /><input type="checkbox"></td>
+				<td><c:out value="${mo.raspuns}" /></td>
 				
 				<td><a class="btn btn-info" href="<c:url value="/detaliiMotive.htm?id=${mo.id}"/>"><i class="fas fa-info-circle"></i>  Detalii</a></td>
 				<td><a class="btn btn-success" href="<c:url value="/editare-motive.htm?id=${mo.id}"/>"><i class="fas fa-edit"></i>  Edit</a></td>
