@@ -33,24 +33,24 @@
 <form:form action="${pageContext.request.contextPath}/adaugare-participanti-save.htm" method="post" modelAttribute="participanti">
 <div class="form-group">	
 <label for = "nume">Nume</label>
-<form:input path="nume" class="form-control"/>
+<form:input path="nume" class="form-control" data-hook="nume_adaugaParticipant"/>
 </div>
 
 <div class="form-group">
 <label for = "prenume">Prenume</label>
-<form:input path="prenume" class="form-control"/>
+<form:input path="prenume" class="form-control" data-hook="prenume_adaugaParticipant"/>
 </div>
 
 <div class="form-group">
 <label for = "varsta">Varsta</label>
-<form:input path="varsta" class="form-control"/>
+<form:input path="varsta" class="form-control" data-hook="varsta_adaugaParticipant"/>
 </div>
 <div class="form-group">
 <label for = "telefon">Telefon</label>
-<form:input path="telefon" class="form-control"/>
+<form:input path="telefon" class="form-control" data-hook="telefon_adaugaParticipant"/>
 </div>
 		<br ><br />
-		<input type="submit"  value="Salveaza" class="btn btn-primary"/>
+		<input type="submit"  value="Salveaza" class="btn btn-primary" data-hook="salveaza_adaugaParticipant_button"/>
 		<br />
 		
 		</form:form>

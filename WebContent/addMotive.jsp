@@ -33,15 +33,21 @@
 <form:form action="${pageContext.request.contextPath}/adaugare-motive-save.htm" method="post" modelAttribute="motive">
 <div class="form-group">	
 <label for = "motiv">Motiv</label>
-<form:input path="motiv" class="form-control"/>
+<form:input path="motiv" class="form-control" data-hook="motiv_adaugaMotiv"/>
 </div>
 
 <div class="form-group">
 <label for = "categorie">Categorie</label>
-<form:input path="categorie" class="form-control"/>
+<form:input path="categorie" class="form-control" data-hook="categorie_adaugaCategorie"/>
 </div>
+
+<div class="form-group">
+<label for = "raspuns">Raspuns</label>
+<form:input path="raspuns" class="form-control" data-hook="raspuns_adaugaRaspuns"/>
+</div>
+
 		<br ><br />
-		<input type="submit"  value="Salveaza" class="btn btn-primary"/>
+		<input type="submit"  value="Salveaza" class="btn btn-primary" data-hook="salveaza_adaugaMotiv_button"/>
 		<br />
 		
 		</form:form>

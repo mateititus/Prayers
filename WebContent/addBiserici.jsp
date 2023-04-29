@@ -33,24 +33,24 @@
 <form:form action="${pageContext.request.contextPath}/adaugare-biserici-save.htm" method="post" modelAttribute="biserici">
 <div class="form-group">	
 <label for = "nume">Nume</label>
-<form:input path="nume" class="form-control"/>
+<form:input path="nume" class="form-control" data-hook="biserica_adaugaBisericaNume"/>
 </div>
 
 <div class="form-group">
 <label for = "adresa">Adresa</label>
-<form:input path="adresa" class="form-control"/>
+<form:input path="adresa" class="form-control" data-hook="biserica_adaugaBisericaAdresa"/>
 </div>
 
 <div class="form-group">
 <label for = "localitate">Localitate</label>
-<form:input path="localitate" class="form-control"/>
+<form:input path="localitate" class="form-control" data-hook="biserica_adaugaBisericaLocalitate"/>
 </div>
 <div class="form-group">
 <label for = "telefon">Telefon</label>
-<form:input path="telefon" class="form-control"/>
+<form:input path="telefon" class="form-control" data-hook="biserica_adaugaBisericaTelefon"/>
 </div>
 		<br ><br />
-		<input type="submit"  value="Salveaza" class="btn btn-primary"/>
+		<input type="submit"  value="Salveaza" class="btn btn-primary" data-hook="salveaza_adaugaBiserica_button"/>
 		<br />
 		
 		</form:form>

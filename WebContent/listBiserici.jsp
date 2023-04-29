@@ -29,14 +29,13 @@
           <div class="col-lg-12">
             <div class="card card-primary card-outline">
               <div class="card-header">
-                <h5 class="m-0">Lista biserici</h5>
+                <h5 class="m-0" data-hook="lista_biserici_header">Lista biserici</h5>
                 
               </div>
               <div class="card-body">
 
 	<table class="table table-head-fixed text-nowrap">
 		<tr>
-			<td><b>ID</b></td>
 			<td><b>Nume</b></td>
 			<td><b>Adresa</b></td>
 			<td><b>Localitate</b></td>
@@ -46,12 +45,11 @@
 			<td></td>
 		</tr>
 		<c:forEach var="bi" items="${biserici}">
-			<tr>
-				<td><c:out value="${bi.id}" /></td>
-				<td><c:out value="${bi.nume}" /></td>
-				<td><c:out value="${bi.adresa}" /></td>
-				<td><c:out value="${bi.localitate}" /></td>
-				<td><c:out value="${bi.telefon}" /></td>
+			<tr data-hook="biserica_${bi.id}"> 
+				<td data-hook="bisericaNume_${bi.nume}"><c:out value="${bi.nume}" /></td>
+				<td data-hook="biserica_${bi.adresa}"><c:out value="${bi.adresa}" /></td>
+				<td data-hook="biserica_${bi.localitate}"><c:out value="${bi.localitate}" /></td>
+				<td data-hook="biserica_${bi.telefon}"><c:out value="${bi.telefon}" /></td>
 				<td><a class="btn btn-info" href="<c:url value="/detaliiBiserici.htm?id=${bi.id}"/>"><i class="fas fa-info-circle"></i>  Detalii</a></td>
 				<td><a class="btn btn-success" href="<c:url value="/editare-biserici.htm?id=${bi.id}"/>"><i class="fas fa-edit"></i>  Edit</a></td>
 				<td><a class="btn btn-danger" href="<c:url value="/deleteBiserici.htm?id=${bi.id}"/>"><i class="fas fa-trash"></i>  Delete</a></td>
@@ -61,7 +59,7 @@
 		</c:forEach>
 	</table>
 	<br></br>
-	<a class="btn btn-primary" href="<c:url value="/adaugare-biserici.htm"/>"><i class="fas fa-plus-square"></i>  <b>Adauga</b></i></a>
+	<a class="btn btn-primary" href="<c:url value="/adaugare-biserici.htm"/>"><i class="fas fa-plus-square" data-hook="adauga_biserica_button"></i>  <b>Adauga</b></i></a>
 </div>
             </div>
           </div>

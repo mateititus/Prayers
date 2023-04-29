@@ -28,14 +28,13 @@
           <div class="col-lg-12">
             <div class="card card-primary card-outline">
               <div class="card-header">
-                <h5 class="m-0">Lista participanti</h5>
+                <h5 class="m-0" data-hook="lista_participanti_header">Lista participanti</h5>
                 
               </div>
               <div class="card-body">
 
 	<table class="table table-head-fixed text-nowrap">
 		<tr>
-			<td><b>ID</b></td>
 			<td><b>Nume</b></td>
 			<td><b>Prenume</b></td>
 			<td><b>Varsta</b></td>
@@ -45,12 +44,12 @@
 			<td></td>
 		</tr>
 		<c:forEach var="pa" items="${participanti}">
-			<tr>
-				<td><c:out value="${pa.id}" /></td>
-				<td><c:out value="${pa.nume}" /></td>
-				<td><c:out value="${pa.prenume}" /></td>
-				<td><c:out value="${pa.varsta}" /></td>
-				<td><c:out value="${pa.telefon}" /></td>
+			<tr data-hook="participant_${pa.id}">
+				
+				<td data-hook="nume_participant_${pa.nume}"><c:out value="${pa.nume}" /></td>
+				<td data-hook="prenume_participant_${pa.prenume}"><c:out value="${pa.prenume}" /></td>
+				<td data-hook="varsta_participant_${pa.varsta}"><c:out value="${pa.varsta}" /></td>
+				<td data-hook="telefon_participant_${pa.telefon}"><c:out value="${pa.telefon}" /></td>
 				<td><a class="btn btn-info" href="<c:url value="/detaliiParticipanti.htm?id=${pa.id}"/>"><i class="fas fa-info-circle"></i>  Detalii</a></td>
 				<td><a class="btn btn-success" href="<c:url value="/editare-participanti.htm?id=${pa.id}"/>"><i class="fas fa-edit"></i>  Edit</a></td>
 				<td><a class="btn btn-danger" href="<c:url value="/deleteParticipanti.htm?id=${pa.id}"/>"><i class="fas fa-trash"></i>  Delete</a></td>
@@ -59,7 +58,7 @@
 		</c:forEach>
 	</table>
 	<br></br>
-	<a class="btn btn-primary" href="<c:url value="/adaugare-participanti.htm"/>"><i class="fas fa-plus-square"></i>  <b>Adauga</b></i></a>
+	<a class="btn btn-primary" href="<c:url value="/adaugare-participanti.htm"/>"><i class="fas fa-plus-square" data-hook="adauga_participant_button"></i>  <b>Adauga</b></i></a>
 </div>
             </div>
           </div>

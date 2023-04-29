@@ -28,14 +28,13 @@
           <div class="col-lg-12">
             <div class="card card-primary card-outline">
               <div class="card-header">
-                <h5 class="m-0">Lista motive</h5>
+                <h5 class="m-0" data-hook="lista_motive_header">Lista motive</h5>
                 
               </div>
               <div class="card-body">
 
 	<table class="table table-head-fixed text-nowrap">
 		<tr>
-			<td><b>ID</b></td>
 			<td><b>Motiv</b></td>
 			<td><b>Categorie</b></td>
 			<td><b>Raspuns</b></td>
@@ -44,11 +43,10 @@
 			<td></td>
 		</tr>
 		<c:forEach var="mo" items="${motive}">
-			<tr>
-				<td><c:out value="${mo.id}" /></td>
-				<td><c:out value="${mo.motiv}" /></td>
-				<td><c:out value="${mo.categorie}" /></td>
-				<td><c:out value="${mo.raspuns}" /><input type="checkbox"></td>
+			<tr data-hook="motiv_${mo.id}">
+				<td data-hook="motivRugaciune_${mo.motiv}"><c:out value="${mo.motiv}" /></td>
+				<td data-hook="categorie_${mo.categorie}"><c:out value="${mo.categorie}" /></td>
+				<td data-hook="raspuns_${mo.raspuns}"><c:out value="${mo.raspuns}" /></td>
 				
 				<td><a class="btn btn-info" href="<c:url value="/detaliiMotive.htm?id=${mo.id}"/>"><i class="fas fa-info-circle"></i>  Detalii</a></td>
 				<td><a class="btn btn-success" href="<c:url value="/editare-motive.htm?id=${mo.id}"/>"><i class="fas fa-edit"></i>  Edit</a></td>
@@ -58,7 +56,7 @@
 		</c:forEach>
 	</table>
 	<br></br>
-	<a class="btn btn-primary" href="<c:url value="/adaugare-motive.htm"/>"><i class="fas fa-plus-square"></i>  <b>Adauga</b></i></a>
+	<a class="btn btn-primary" href="<c:url value="/adaugare-motive.htm"/>"><i class="fas fa-plus-square" data-hook="adauga_motiv_button"></i>  <b>Adauga</b></i></a>
 </div>
             </div>
           </div>
