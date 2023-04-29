@@ -5,5 +5,5 @@
       Our secret is simple: We Pray!
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2023 Matei Titus
+    <strong>Copyright &copy; 2021 Matei Titus
   </footer>
